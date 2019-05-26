@@ -1,0 +1,222 @@
+/************************
+***** PERSONAL SITE *****
+*************************/
+
+/* ***** BASIC CSS ***** */
+
+a {
+  color: #11999e;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+  transition: 240ms;
+}
+
+body {
+  color: #40514e;
+  font-family: 'Merriweather', serif;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #66bfbf;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #11999e;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+}
+
+hr {
+  border: #def1f1 6px;
+  border-style: dotted none none;
+  width: 5%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  line-height: 2;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* ***** HEADER SECTION ***** */
+
+header {
+  font-size: 1.2rem;
+  height: 72px;
+  margin: 0 auto;
+  padding: 50px 150px;
+  text-align: left;
+}
+
+header.nav {
+  background-color: #fff;
+  box-shadow: 0 1px 1px #0608081a;
+  left: 0;
+  opacity: 0.97;
+  padding: 40px 0px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav .navbar {
+  margin: 0 120px;
+}
+
+.logo {
+  cursor: pointer;
+  height: 72px;
+}
+
+nav {
+  float: right;
+  line-height: 72px;
+}
+
+nav a:hover {
+  color: #053133;
+}
+
+/* ***** TOP SECTION ***** */
+
+section#top {
+  background-color: #e4f9f5;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  padding-top: 90px;
+  position: relative;
+  z-index: 3;
+}
+
+@media only screen and (max-height: 767px) {
+  .title {
+    padding-top: 3%;
+  }
+}
+
+h1 {
+  color: #66bfbf;
+  font-family: 'Sacramento', cursive;
+  font-size: 5.625rem;
+  margin: 0 auto;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+}
+
+.top-cloud {
+  height: 55px;
+  position: absolute;
+  right: 250px;
+  top: 170px;
+}
+
+.bottom-cloud {
+  bottom: 42%;
+  height: 55px;
+  left: 270px;
+  position: absolute;
+}
+
+.mountain {
+  bottom: 0;
+  height: 40%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+/* ***** PROFILE SECTION ***** */
+
+.profile-pic {
+  margin-bottom: 24px;
+}
+
+.intro {
+  margin: 24px auto 0;
+  width: 30%;
+}
+
+/* ***** SKILLS SECTION ***** */
+
+.skill {
+  margin: 100px auto 0;
+  text-align: left;
+  width: 50%;
+}
+
+.dev-img {
+  float: left;
+  margin-right: 30px;
+  width: 25%;
+}
+
+.game-img {
+  float: right;
+  margin-left: 30px;
+  width: 25%;
+}
+
+/* ***** CONTACT SECTION ***** */
+
+.contact-title {
+  padding-bottom: 24px;
+}
+
+.contact-message {
+  margin: 46px auto 34px;
+  width: 40%;
+}
+
+.contact-btn {
+  background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+}
+
+/* ***** FOOTER SECTION ***** */
+
+footer {
+  background-color: #66bfbf;
+  padding: 50px 0 40px;
+}
+
+a:hover {
+  color: #eaf6f6;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.62rem;
+  margin: 0;
+  padding: 24px 0 0;
+}

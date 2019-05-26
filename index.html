@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Abubakr Muhammad</title>
+    <link rel="icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/animate.css@3.7.0/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <section id="top">
+      <header class="animated faster">
+        <div class="navbar">
+          <img src="images/logo.png" class="logo" id="nav-top" alt="logo" />
+          <nav>
+            <a href="#profile">Hello</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </header>
+      <img src="images/cloud.png" class="top-cloud" alt="cloud-image" />
+      <div class="title">
+        <h1>I'm Abubakr.</h1>
+        <h2 class="subtitle">a web developer.</h2>
+      </div>
+      <img src="images/cloud.png" class="bottom-cloud" alt="cloud-image" />
+      <img src="images/mountain.png" class="mountain" alt="mountain-image" />
+    </section>
+
+    <main>
+      <section id="profile">
+        <img src="images/abubakr.png" class="profile-pic" alt="abubakr-picture" />
+        <h2>Hi.</h2>
+        <p class="intro">
+          I'm a Part Time Gamer. I am a student learning Web Development. I 💗 playing
+          Games.
+        </p>
+      </section>
+      <hr />
+      <section id="skills">
+        <h2>What I can do.</h2>
+        <div class="skill">
+          <img class="dev-img" src="images/development.png" alt="developer-designer" />
+          <h3>Design & Development</h3>
+          <p>
+            I started learning to code when I was 14 years old because I wanted to make my
+            own video games. Over time, I have gained a wealth of experience designing and
+            developing web applications.
+          </p>
+        </div>
+        <div class="skill">
+          <img class="game-img" src="images/gaming.png" alt="gamer" />
+          <h3>Gaming</h3>
+          <p>
+            Not the best skill I have but the most fun one. I have been gaming for almost 8
+            years now and it's still one of my favourite skills.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section id="contact">
+        <h2 class="contact-title">Get In Touch</h2>
+        <h3>If you love gaming as much I do.</h3>
+        <p class="contact-message">
+          Love gaming as much as I do? Let's talk how fun it is! We can have fun together!
+        </p>
+        <a class="contact-btn" href="mailto:realchampiontheno1@gmail.com">CONTACT ME</a>
+      </section>
+    </main>
+
+    <footer>
+      <a target="_blank" href="https://github.com/abubakrmuhammad">Github</a>
+      <a target="_blank" href="https://www.facebook.com/AbubakrChamp">Facebook</a>
+      <a target="_blank" href="https://bookuet.herokuapp.com/">Website</a>
+      <p class="copyright">
+        &copy; <span id="year">2002</span> Abubakr Muhammad. All rights reserved.
+      </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+      // Navbar Animations
+      $('main').waypoint(
+        direction => {
+          if (direction === 'down') {
+            $('header')
+              .removeClass('slideOutUp')
+              .addClass('nav slideInDown');
+          } else {
+            $('header')
+              .removeClass('slideInDown')
+              .addClass('slideOutUp');
+            setTimeout(() => {
+              $('header').removeClass('nav slideOutUp');
+            }, 50);
+          }
+        },
+        {
+          offset: '120px'
+        }
+      );
+      // Goto Top Nav
+      $('#nav-top').click(event => {
+        event.preventDefault();
+        window.scrollTo(0, 0);
+      });
+      // Current year in copyright
+      $('#year').text(new Date().getFullYear());
+    </script>
+  </body>
+</html>
