@@ -5,7 +5,7 @@
     <title>Abubakr Muhammad</title>
     <link rel="icon" href="favicon.ico" />
     <link
-      href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Sacramento&display=swap"
+      href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat|Allura&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -88,33 +88,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script>
-      // Navbar Animations
-      $('main').waypoint(
-        direction => {
-          if (direction === 'down') {
-            $('header')
-              .removeClass('slideOutUp')
-              .addClass('nav slideInDown');
+      $(document).ready(() => {
+        // Navbar Animations
+        let lastScrollTop = 0;
+
+        $(window).scroll(event => {
+          const scrollTop = $(this).scrollTop();
+
+          if (scrollTop === 0) {
+            $('header').removeClass('nav slideOutUp');
           } else {
-            $('header')
-              .removeClass('slideInDown')
-              .addClass('slideOutUp');
-            setTimeout(() => {
-              $('header').removeClass('nav slideOutUp');
-            }, 50);
+            if (scrollTop > lastScrollTop) {
+              $('header')
+                .removeClass('slideInDown')
+                .addClass('slideOutUp');
+            } else {
+              $('header')
+                .removeClass('slideOutUp')
+                .addClass('nav slideInDown');
+            }
+
+            lastScrollTop = scrollTop;
           }
-        },
-        {
-          offset: '120px'
-        }
-      );
-      // Goto Top Nav
-      $('#nav-top').click(event => {
-        event.preventDefault();
-        window.scrollTo(0, 0);
+        });
+
+        // Goto Top Navigation
+        $('#nav-top').click(event => {
+          event.preventDefault();
+          window.scrollTo(0, 0);
+        });
+
+        // Current year in copyright
+        $('#year').text(new Date().getFullYear());
       });
-      // Current year in copyright
-      $('#year').text(new Date().getFullYear());
     </script>
   </body>
 </html>

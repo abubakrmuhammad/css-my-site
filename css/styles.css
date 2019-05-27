@@ -57,23 +57,22 @@ header {
   font-size: 1.2rem;
   height: 72px;
   margin: 0 auto;
-  padding: 50px 150px;
+  padding: 50px 0;
+  position: fixed;
   text-align: left;
+  top: 0;
+  transition: 300ms;
+  width: 100%;
+  z-index: 1000;
 }
 
 header.nav {
   background-color: #fff;
   box-shadow: 0 1px 1px #0608081a;
-  left: 0;
   opacity: 0.97;
-  padding: 40px 0px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
 }
 
-.nav .navbar {
+.navbar {
   margin: 0 120px;
 }
 
@@ -103,20 +102,20 @@ section#top {
 }
 
 .title {
-  padding-top: 90px;
+  padding-top: calc(90px + 172px);
   position: relative;
   z-index: 3;
 }
 
 @media only screen and (max-height: 767px) {
   .title {
-    padding-top: 3%;
+    padding-top: calc(3% + 172px);
   }
 }
 
 h1 {
   color: #66bfbf;
-  font-family: 'Sacramento', cursive;
+  font-family: 'Allura', cursive;
   font-size: 5.625rem;
   margin: 0 auto;
 }
