@@ -9,6 +9,7 @@ a {
   font-family: 'Montserrat', sans-serif;
   margin: 10px 20px;
   text-decoration: none;
+  -webkit-transition: 240ms;
   transition: 240ms;
 }
 
@@ -61,6 +62,7 @@ header {
   position: fixed;
   text-align: left;
   top: 0;
+  -webkit-transition: 800ms ease;
   transition: 800ms ease;
   width: 100%;
   z-index: 1000;
@@ -68,6 +70,7 @@ header {
 
 header.nav {
   background-color: #fff;
+  -webkit-box-shadow: 0 1px 1px #0608081a;
   box-shadow: 0 1px 1px #0608081a;
   opacity: 0.97;
 }
@@ -143,6 +146,7 @@ h1 {
   height: 40%;
   left: 50%;
   position: absolute;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -189,6 +193,13 @@ h1 {
 }
 
 .contact-btn {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#11cdd4),
+    to(#11999e)
+  );
   background-image: linear-gradient(to bottom, #11cdd4, #11999e);
   border-radius: 8px;
   color: #ffffff;
@@ -199,6 +210,13 @@ h1 {
 }
 
 .contact-btn:hover {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#30e3cb),
+    to(#2bc4ad)
+  );
   background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
 }
 
