@@ -61,7 +61,7 @@ header {
   position: fixed;
   text-align: left;
   top: 0;
-  transition: 300ms;
+  transition: 800ms ease;
   width: 100%;
   z-index: 1000;
 }
