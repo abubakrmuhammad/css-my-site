@@ -154,6 +154,7 @@ h1 {
 
 .profile-pic {
   margin-bottom: 24px;
+  border-radius: 100%;
 }
 
 .intro {
